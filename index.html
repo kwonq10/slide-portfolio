@@ -1,0 +1,1246 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="訴求整理、SEOライティング、AI活用で問い合わせにつながるLPを制作。中谷健一のLP制作ポートフォリオです。">
+  <meta name="theme-color" content="#132b46">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="中谷健一 | 問い合わせにつながるLP制作">
+  <meta property="og:description" content="訴求整理、SEOライティング、AI活用で問い合わせにつながるLPを制作。中谷健一のLP制作ポートフォリオです。">
+  <meta property="og:image" content="images/profile-photo.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="中谷健一 | 問い合わせにつながるLP制作">
+  <meta name="twitter:description" content="訴求整理、SEOライティング、AI活用で問い合わせにつながるLPを制作。中谷健一のLP制作ポートフォリオです。">
+  <meta name="twitter:image" content="images/profile-photo.png">
+  <title>中谷健一 | 問い合わせにつながるLP制作</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #132b46;
+      --navy-deep: #0a1727;
+      --cyan: #4fc7ea;
+      --orange: #ff7b4d;
+      --paper: #f6f8fb;
+      --card: #ffffff;
+      --text: #233548;
+      --muted: #617387;
+      --line: #dbe5ef;
+      --shadow: 0 18px 40px rgba(19, 43, 70, 0.12);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(79, 199, 234, 0.45);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -56px;
+      z-index: 40;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: white;
+      color: var(--navy);
+      box-shadow: var(--shadow);
+      transition: top .2s ease;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    .section { padding: 88px 0; }
+
+    .section-soft {
+      background:
+        linear-gradient(180deg, rgba(19, 43, 70, 0.03) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .heading-line {
+      display: inline-block;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(10, 23, 39, 0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand small {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .brand strong {
+      font-size: 15px;
+      letter-spacing: 0.08em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: rgba(255,255,255,0.76);
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--orange), #ff9c73);
+      color: white;
+      box-shadow: 0 14px 28px rgba(255,123,77,0.28);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(79,199,234,0.18), transparent 24%),
+        radial-gradient(circle at 82% 20%, rgba(255,123,77,0.16), transparent 20%),
+        linear-gradient(145deg, #081321 0%, #133458 60%, #1f4b77 100%);
+      color: white;
+      padding: 84px 0 92px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.9);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 0.98;
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+
+    .hero-copy p {
+      color: rgba(255,255,255,0.82);
+      font-size: 15px;
+      max-width: 640px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin: 30px 0;
+    }
+
+    .hero-point {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .hero-point strong {
+      display: block;
+      color: #ffd69f;
+      font-size: 26px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .hero-point span {
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .hero-note { color: rgba(255,255,255,0.62); font-size: 12px; }
+
+    .hero-card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.18);
+    }
+
+    .hero-card h2 {
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .hero-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .hero-list li {
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(8,19,33,0.32);
+      color: rgba(255,255,255,0.86);
+      font-size: 14px;
+    }
+
+    .signal {
+      margin-top: -26px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .signal-inner {
+      background: white;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 24px 26px;
+      display: grid;
+      grid-template-columns: 1.3fr repeat(3, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .signal-lead strong {
+      display: block;
+      font-size: 24px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .signal-lead span, .signal-cell span { color: var(--muted); font-size: 13px; }
+    .signal-cell strong { display:block; color: var(--navy); font-size: 24px; margin-bottom: 6px; }
+
+    .cards-3, .portfolio-grid, .faq-grid, .flow-grid {
+      display: grid;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .cards-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .portfolio-grid { grid-template-columns: repeat(3, minmax(0,1fr)); max-width: 1120px; margin: 0 auto; }
+    .faq-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .flow-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+
+    .card, .portfolio-card, .faq-item, .profile-card, .profile-stat, .flow-card {
+      background: white;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+    }
+
+    .card {
+      padding: 28px;
+      border-top: 4px solid var(--cyan);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.45;
+    }
+
+    .card p { color: var(--muted); font-size: 14px; }
+
+    .card-list {
+      list-style: none;
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .card-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--cyan));
+    }
+
+    .flow-card {
+      padding: 26px 24px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .flow-card::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      bottom: -28px;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,199,234,0.14), rgba(79,199,234,0));
+      pointer-events: none;
+    }
+
+    .flow-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--navy), #1f4b77);
+      color: white;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .flow-card h3 {
+      font-size: 18px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.45;
+    }
+
+    .flow-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pricing {
+      background:
+        linear-gradient(180deg, #ffffff 0%, #f1f7fb 100%);
+    }
+
+    .price-panel {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 42px;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(246,250,253,0.96));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .price-panel::before {
+      content: '';
+      position: absolute;
+      inset: 18px;
+      border: 1px dashed rgba(19,43,70,0.18);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    .price-content {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+    }
+
+    .price-label {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eef5fb;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .price-content h3 {
+      margin: 18px 0 10px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.18;
+    }
+
+    .regular-price {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 24px 0 12px;
+      color: var(--navy);
+    }
+
+    .regular-price small {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .regular-price strong {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .regular-price span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .price-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .price-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .price-list li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .price-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    .price-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .price-sticker {
+      position: absolute;
+      z-index: 2;
+      right: 40px;
+      top: 44px;
+      width: min(260px, 32vw);
+      min-height: 210px;
+      padding: 26px 20px 24px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, #ff7b4d 0%, #ff9c73 100%);
+      color: white;
+      box-shadow: 0 22px 42px rgba(255,123,77,0.32);
+      transform: rotate(4deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .price-sticker::before {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      border: 1px dashed rgba(255,255,255,0.55);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .price-sticker small {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+    }
+
+    .price-sticker strong {
+      position: relative;
+      z-index: 1;
+      margin: 10px 0 8px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .price-sticker span {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .portfolio { background: linear-gradient(180deg, #eef5fb 0%, #f8fbff 100%); }
+
+    .portfolio-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .portfolio-banner {
+      display: block;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #dde6ef;
+    }
+
+    .portfolio-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .portfolio-card:hover .portfolio-banner img { transform: scale(1.03); }
+
+    .portfolio-body {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .portfolio-body h3 {
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--navy);
+    }
+
+    .portfolio-body p { color: var(--muted); font-size: 14px; }
+
+    .portfolio-body ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .portfolio-body li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .portfolio-body li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .portfolio-link { width: 100%; margin-top: auto; }
+
+    .portfolio-tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef5fb;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .profile-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .profile-card {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .profile-card h3 { font-size: 34px; color: var(--navy); margin-bottom: 16px; }
+    .profile-name { color: var(--cyan); font-size: 13px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 10px; }
+    .profile-card p { color: var(--muted); font-size: 14px; }
+
+    .profile-photo {
+      margin: 24px 0 0;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(19, 43, 70, 0.14);
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 22% 16%, rgba(79,199,234,0.22), transparent 26%),
+        radial-gradient(circle at 78% 20%, rgba(255,123,77,0.16), transparent 24%),
+        linear-gradient(145deg, #e7f0f7 0%, #d9e7f0 48%, #eef5fa 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: 310px;
+      padding: 28px 34px 18px;
+      flex: 1;
+    }
+
+    .profile-photo img {
+      width: min(82%, 300px);
+      max-height: 280px;
+      object-fit: contain;
+      object-position: center bottom;
+      border-radius: 18px;
+    }
+
+    .profile-stats {
+      display: grid;
+      gap: 14px;
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+
+    .profile-stat {
+      padding: 22px 24px;
+      background: linear-gradient(180deg, #102640 0%, #173a60 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    .profile-stat small { display:block; color: rgba(255,255,255,0.68); font-size: 11px; letter-spacing: .16em; margin-bottom: 10px; text-transform: uppercase; }
+    .profile-stat strong { display:block; font-size: 30px; color: #ffd69f; margin-bottom: 8px; }
+    .profile-stat span { color: rgba(255,255,255,0.8); font-size: 13px; }
+
+    .profile-detail {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(239,245,251,0.96) 100%);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    .profile-detail small {
+      display: block;
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .profile-detail strong {
+      display: block;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .profile-detail ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .profile-detail li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .profile-detail li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--cyan));
+    }
+
+    .faq-item {
+      padding: 24px 26px;
+      height: 100%;
+    }
+    .faq-item summary { list-style:none; cursor:pointer; color: var(--navy); font-size: 17px; font-weight: 700; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item p { margin-top: 14px; color: var(--muted); font-size: 14px; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: revealUp .7s ease forwards;
+    }
+
+    .reveal-delay-1 { animation-delay: .08s; }
+    .reveal-delay-2 { animation-delay: .16s; }
+    .reveal-delay-3 { animation-delay: .24s; }
+
+    @keyframes revealUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button,
+      .portfolio-banner img,
+      .skip-link,
+      .reveal {
+        transition: none;
+        animation: none;
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    footer {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 960px) {
+      .hero-inner,
+      .signal-inner,
+      .cards-3,
+      .flow-grid,
+      .portfolio-grid,
+      .faq-grid,
+      .profile-wrap,
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .signal { margin-top: 0; }
+
+      .profile-stats {
+        grid-template-rows: none;
+      }
+
+      .price-content {
+        max-width: none;
+        padding-top: 210px;
+      }
+
+      .price-sticker {
+        left: 50%;
+        right: auto;
+        top: 30px;
+        width: min(280px, calc(100% - 56px));
+        min-height: 170px;
+        transform: translateX(-50%) rotate(3deg);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 72px 0; }
+      .topbar-inner { min-height: 62px; }
+      .nav a:not(.button-primary) { display: none; }
+      .hero { padding: 58px 0 72px; }
+      .hero-card, .card, .portfolio-body, .faq-item, .profile-card, .profile-stat, .profile-detail, .signal-inner { padding: 22px; }
+      .price-panel { padding: 28px 22px; border-radius: 22px; }
+      .price-panel::before { inset: 12px; }
+      .price-content { padding-top: 188px; }
+      .regular-price { flex-wrap: wrap; gap: 8px; }
+      .profile-photo {
+        min-height: 260px;
+        padding: 24px 24px 16px;
+        flex: initial;
+      }
+      .profile-photo img {
+        width: min(78%, 240px);
+        max-height: 230px;
+      }
+      .hero-actions { display:grid; }
+      .hero-actions .button { width: 100%; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">コンテンツへスキップ</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <small>Landing Page Production</small>
+        <strong>中谷健一 / LP制作ポートフォリオ</strong>
+      </a>
+      <nav class="nav">
+        <a href="#service">支援内容</a>
+        <a href="#flow">進め方</a>
+        <a href="#price">料金</a>
+        <a href="#portfolio">制作事例</a>
+        <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf_LnPZLaA41qACjuvhsPq69MXwBoQsf_wBt0IY8SIoO275ng/viewform?usp=header">ヒアリングシート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div id="main-content"></div>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <div class="hero-badges">
+            <span class="hero-badge">AI駆動で高速構築</span>
+            <span class="hero-badge">SEOライティング知見</span>
+            <span class="hero-badge">訴求整理から伴走</span>
+          </div>
+          <h1 class="serif">問い合わせにつながるLPを、<br>構成から制作まで。</h1>
+          <p>商品やサービスの強みを整理し、読み手が納得して相談できるLPへ落とし込みます。AIで制作の初速を上げながら、訴求・導線・スマホ表示は人の判断で丁寧に仕上げます。</p>
+          <div class="hero-points">
+            <div class="hero-point">
+              <strong>92%</strong>
+              <span>クラウドワークス完了率</span>
+            </div>
+            <div class="hero-point">
+              <strong>100%</strong>
+              <span>承認率ベースの安心感</span>
+            </div>
+            <div class="hero-point">
+              <strong>Text + Design</strong>
+              <span>原稿整理から実装まで一気通貫</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf_LnPZLaA41qACjuvhsPq69MXwBoQsf_wBt0IY8SIoO275ng/viewform?usp=header">ヒアリングシートに回答する</a>
+            <a class="button button-secondary" href="#portfolio">制作事例を見る</a>
+          </div>
+          <p class="hero-note">クラウドワークス上で内容確認いただく前提の、提案用ポートフォリオLPです。</p>
+        </div>
+        <aside class="hero-card reveal reveal-delay-1">
+          <h2 class="serif">原稿や構成が決まっていなくても相談できます。</h2>
+          <ul class="hero-list">
+            <li>構成が曖昧でも、課題と強みの整理から一緒に進行</li>
+            <li>デザインだけでなく、見出し順とCTA配置まで提案</li>
+            <li>AIを使うのは雑に量産するためではなく、検討時間を増やすため</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="signal">
+      <div class="container signal-inner">
+        <div class="signal-lead">
+          <strong class="serif">このページ自体が、提案品質のサンプルです。</strong>
+          <span>速さだけでなく、読み手の理解順に沿って情報を並べることを大切にしています。</span>
+        </div>
+        <div class="signal-cell">
+          <strong>AI</strong>
+          <span>構築スピードを底上げ</span>
+        </div>
+        <div class="signal-cell">
+          <strong>SEO</strong>
+          <span>読み手理解の土台あり</span>
+        </div>
+        <div class="signal-cell">
+          <strong>1人対応</strong>
+          <span>意図がぶれず進行</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Service</span>
+          <h2><span class="heading-line">商品やサービスの強みを</span><span class="heading-line">整理して、問い合わせにつながる</span><span class="heading-line">LPを作ります。</span></h2>
+          <p>単にHTMLを組むのではなく、訴求整理からCTA設計まで含めてLP全体を組み立てます。</p>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <h3>構成設計と訴求整理</h3>
+            <p>商品特性、理想顧客、比較対象、不安要素を洗い出し、どこで何を伝えるべきかを整理します。</p>
+            <ul class="card-list">
+              <li>ファーストビューの言い切り整理</li>
+              <li>見出しの順番とCTA導線の設計</li>
+              <li>競合との差別化ポイントの言語化</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>AI活用による高速実装</h3>
+            <p>初動を速めながらも、案件ごとのトーンや密度が薄くならないよう最終判断は人が担います。</p>
+            <ul class="card-list">
+              <li>短納期でも破綻しにくい制作フロー</li>
+              <li>文言とデザインの往復が速い</li>
+              <li>改善前提のたたき台づくりにも対応</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>公開後を見据えた仕上げ</h3>
+            <p>スマホ表示、CTA前の心理障壁、FAQなど、離脱しやすい箇所まで含めて整えます。</p>
+            <ul class="card-list">
+              <li>モバイルファーストの最終調整</li>
+              <li>補足導線やFAQの設計</li>
+              <li>差し替えしやすい構造で実装</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="flow">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Flow</span>
+          <h2><span class="heading-line">はじめての相談でも、</span><span class="heading-line">順番に確認しながら</span><span class="heading-line">進めます。</span></h2>
+          <p>初回相談の段階で情報が不足していても大丈夫です。ヒアリングから必要な整理を進めながら形にしていきます。</p>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-card">
+            <div class="flow-step">01</div>
+            <h3>現状と目的のヒアリング</h3>
+            <p>商品・サービスの特徴、今の集客課題、理想のお客様像を確認し、LPで解くべき論点を絞ります。</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-step">02</div>
+            <h3>構成案と訴求軸の整理</h3>
+            <p>ファーストビュー、見出し順、CTAの置き方まで含めて、読み手が理解しやすい順番に再構成します。</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-step">03</div>
+            <h3>デザインと実装の具体化</h3>
+            <p>AIで初速を上げつつ、案件ごとのトーンや密度に合わせて、見た目と情報量を人の判断で整えます。</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-step">04</div>
+            <h3>スマホ調整と公開前チェック</h3>
+            <p>見切れ、余白、CTA直前の不安要素、FAQの不足などを点検し、公開後に直しやすい形で仕上げます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="price">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Price</span>
+          <h2>先着10名様限定の特別価格をご用意しています。</h2>
+          <p>実績掲載やSNSでのご紹介にご協力いただける方へ、通常よりお申し込みいただきやすい価格で制作します。</p>
+        </div>
+        <article class="price-panel">
+          <div class="price-sticker">
+            <small>先着10名様限定</small>
+            <strong>39,800円〜</strong>
+            <span>実績掲載・ご紹介に<br>ご協力いただける方へ</span>
+          </div>
+          <div class="price-content">
+            <span class="price-label">通常価格</span>
+            <h3>LP制作一式</h3>
+            <div class="regular-price">
+              <small>通常</small>
+              <strong>59,800円〜</strong>
+              <span>税込目安</span>
+            </div>
+            <p class="price-note">構成整理・ライティング・デザイン・スマホ対応までまとめてご相談いただけます。</p>
+            <ul class="price-list">
+              <li>より幅広い業種の制作実績を増やすための限定価格です。</li>
+              <li>掲載内容は事前確認のうえ、公開可能な範囲で調整します。</li>
+              <li>内容量や機能追加がある場合は、事前にお見積もりします。</li>
+            </ul>
+            <div class="price-actions">
+              <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf_LnPZLaA41qACjuvhsPq69MXwBoQsf_wBt0IY8SIoO275ng/viewform?usp=header">ヒアリングシートに回答する</a>
+              <a class="button button-secondary" href="#flow">進め方を見る</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Portfolio</span>
+          <h2><span class="heading-line">制作イメージが</span><span class="heading-line">わかるLP事例</span></h2>
+          <p>バナー画像からそのまま実ページへ遷移できます。下のボタンからでも確認できます。</p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <a class="portfolio-banner" href="https://gentle-gelato-7df9dd.netlify.app">
+              <img src="images/portfolio-food.jpg" alt="和の高級感を訴求した飲食店LPのバナー">
+            </a>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Restaurant Branding LP</span>
+              <h3>高単価帯の和食・海鮮業態を想定したブランド訴求LP</h3>
+              <p>高級感のある配色、余白設計、コピーの見せ方を通して、価格ではなく体験価値で選ばせることを意識したLPです。第一印象で世界観を伝えたい飲食ブランド向けの構成にしています。</p>
+              <ul>
+                <li>ファーストビューで高級感と非日常感を演出</li>
+                <li>店舗価値を下げない上品なコピー設計</li>
+                <li>来店動機につながるブランド訴求中心の導線</li>
+              </ul>
+              <a class="button button-secondary portfolio-link" href="https://gentle-gelato-7df9dd.netlify.app">このLPを見る</a>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <a class="portfolio-banner" href="https://glowing-begonia-5ae03b.netlify.app">
+              <img src="images/portfolio-beauty.jpg" alt="やわらかな美容系トーンのLPバナー">
+            </a>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Beauty Care LP</span>
+              <h3>美容機器・ケア商材を想定したやさしい訴求のLP</h3>
+              <p>やわらかなトーンと清潔感のあるUIで不安を抑えつつ、機能理解から申込まで自然につなげる美容系LPです。女性向け商材で大切な安心感と上品さの両立を意識しています。</p>
+              <ul>
+                <li>やわらかい配色で安心感をつくる導入設計</li>
+                <li>機能や流れを直感的に理解しやすい情報整理</li>
+                <li>比較検討から申込まで迷わせにくいCTA導線</li>
+              </ul>
+              <a class="button button-secondary portfolio-link" href="https://glowing-begonia-5ae03b.netlify.app">このLPを見る</a>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <a class="portfolio-banner" href="https://zettai-soushiyo.netlify.app">
+              <img src="images/portfolio-event.png" alt="絶対そうしよナイトのイベントLPバナー">
+            </a>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Event Promotion LP</span>
+              <h3>イベント告知素材から制作した「絶対そうしよナイト」LP</h3>
+              <p>イベントホームページ、イベントInstagram、いただいた画像をもとに、雰囲気と申込導線が伝わるLPとして再構成しました。限られた素材からでも、イベントの楽しさと安心感が伝わる見せ方に整えています。</p>
+              <ul>
+                <li>イベントの世界観を活かした明るいファーストビュー</li>
+                <li>開催情報と申込導線を迷わせにくく整理</li>
+                <li>主催者様から好評をいただき、掲載許可も確認済み</li>
+              </ul>
+              <a class="button button-secondary portfolio-link" href="https://zettai-soushiyo.netlify.app">このLPを見る</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="profile">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Profile</span>
+          <h2>テクノロジーとことばの間をつなぐ制作者です。</h2>
+          <p>単に作れるだけでなく、何をどう伝えるべきかを整理しながら伴走できることが強みです。</p>
+        </div>
+        <div class="profile-wrap">
+          <article class="profile-card">
+            <div class="profile-name">Kenichi Nakatani</div>
+            <h3>中谷 健一</h3>
+            <p>石川県金沢市を拠点に活動。京都外国語大学卒、金沢大学大学院修了。他業務専念期間を経てフリーランスを再開し、AI・自動化システムの構築からWeb制作まで、テクノロジーとデザインを掛け合わせた提案を行っています。</p>
+            <p style="margin-top: 14px;">「なんとなく作る」のではなく、事業の強みと読み手の心理を整理して、成果につながる導線へ落とし込むのが得意です。</p>
+            <figure class="profile-photo">
+              <img src="images/profile-photo.png" alt="中谷健一のプロフィール写真">
+            </figure>
+          </article>
+          <aside class="profile-stats">
+            <div class="profile-stat">
+              <small>Overall Rating</small>
+              <strong>4.4 / 5.0</strong>
+              <span>継続的な評価の積み上げがあります。</span>
+            </div>
+            <div class="profile-stat">
+              <small>Completion Rate</small>
+              <strong>92%</strong>
+              <span>途中で投げ出さず、最後まで伴走する姿勢を大切にしています。</span>
+            </div>
+            <div class="profile-detail">
+              <small>Support Scope</small>
+              <strong>構成整理から実装まで、一貫して対応できます。</strong>
+              <ul>
+                <li>訴求軸の整理と見出し構成の提案</li>
+                <li>スマホ表示を前提にしたLPデザイン調整</li>
+                <li>公開後に差し替えしやすい静的実装</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">FAQ</span>
+          <h2>相談前によくある不安に答えます。</h2>
+          <p>最初から全てが決まっていなくても大丈夫です。まずは現状と目的から共有いただければ進められます。</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>構成がまだ固まっていません。それでも相談できますか？</summary>
+            <p>大丈夫です。目的、商品、理想顧客を起点に、どんな順番で伝えるべきかを一緒に整理します。</p>
+          </details>
+          <details class="faq-item" open>
+            <summary>文章も含めてお願いできますか？</summary>
+            <p>はい。元原稿がある場合は整え、ない場合もヒアリング内容をもとに見出しや本文の骨格を提案します。</p>
+          </details>
+          <details class="faq-item">
+            <summary>AIを使うと、似たようなLPになりませんか？</summary>
+            <p>似てしまうのはAIに丸投げした場合です。高速化には使いますが、訴求軸や最終仕上げは案件ごとに人が判断して詰めます。</p>
+          </details>
+          <details class="faq-item">
+            <summary>まずは軽く相談だけでも大丈夫ですか？</summary>
+            <p>もちろんです。無理な営業はせず、現状の課題に対してLPが有効かどうかも含めて率直にお返しします。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Kenichi Nakatani. All rights reserved.
+  </footer>
+</body>
+</html>
