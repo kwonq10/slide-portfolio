@@ -43,10 +43,10 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
     }
 
     body {
+      overflow: hidden;
       min-height: 100vh;
       color: var(--ink);
       background: var(--paper);
@@ -194,8 +194,29 @@
       background: rgba(17, 36, 58, 0.78);
     }
 
+    main {
+      display: flex;
+      width: 100vw;
+      height: 100svh;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      overscroll-behavior-x: contain;
+      overscroll-behavior-y: none;
+      touch-action: pan-x pinch-zoom;
+    }
+
+    main::-webkit-scrollbar {
+      display: none;
+    }
+
     .slide {
+      flex: 0 0 100vw;
       position: relative;
+      width: 100vw;
+      height: 100svh;
       min-height: 100svh;
       display: grid;
       align-items: center;
@@ -1218,12 +1239,12 @@
       <a href="#slide-10" aria-label="スライド10"></a>
     </nav>
     <div class="deck-controls">
-      <button class="icon-button" type="button" data-move="-1" aria-label="前のスライドへ">↑</button>
-      <button class="icon-button" type="button" data-move="1" aria-label="次のスライドへ">↓</button>
+      <button class="icon-button" type="button" data-move="-1" aria-label="前のスライドへ">←</button>
+      <button class="icon-button" type="button" data-move="1" aria-label="次のスライドへ">→</button>
     </div>
   </div>
 
-  <main>
+  <main id="slide-track">
     <section class="slide theme-deep" id="slide-1">
       <div class="container split">
         <div>
@@ -1512,6 +1533,7 @@
   </main>
 
   <script>
+    const track = document.getElementById('slide-track');
     const slides = Array.from(document.querySelectorAll('.slide'));
     const dots = Array.from(document.querySelectorAll('.dot-nav a'));
     const current = document.getElementById('current-slide');
@@ -1523,24 +1545,48 @@
       current.textContent = String(index + 1).padStart(2, '0');
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActive(slides.indexOf(entry.target));
-        }
-      });
-    }, { threshold: 0.58 });
-
-    slides.forEach((slide) => observer.observe(slide));
-
     function activeIndex() {
       return dots.findIndex((dot) => dot.classList.contains('active'));
     }
 
     function goToSlide(index) {
-      const target = slides[Math.max(0, Math.min(slides.length - 1, index))];
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nextIndex = Math.max(0, Math.min(slides.length - 1, index));
+      const target = slides[nextIndex];
+      track.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+      setActive(nextIndex);
+      history.replaceState(null, '', `#slide-${nextIndex + 1}`);
     }
+
+    function syncFromScroll() {
+      const index = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+      setActive(Math.max(0, Math.min(slides.length - 1, index)));
+    }
+
+    let scrollTimer;
+    track.addEventListener('scroll', () => {
+      window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => {
+        syncFromScroll();
+        const index = activeIndex();
+        history.replaceState(null, '', `#slide-${index + 1}`);
+      }, 80);
+    }, { passive: true });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', (event) => {
+        event.preventDefault();
+        goToSlide(index);
+      });
+    });
+
+    window.addEventListener('load', () => {
+      const match = location.hash.match(/slide-(\d+)/);
+      if (match) {
+        goToSlide(Number(match[1]) - 1);
+      } else {
+        setActive(0);
+      }
+    });
 
     document.querySelectorAll('[data-move]').forEach((button) => {
       button.addEventListener('click', () => {
@@ -1549,8 +1595,8 @@
     });
 
     window.addEventListener('keydown', (event) => {
-      const nextKeys = ['ArrowDown', 'PageDown', ' '];
-      const prevKeys = ['ArrowUp', 'PageUp'];
+      const nextKeys = ['ArrowRight', 'ArrowDown', 'PageDown', ' '];
+      const prevKeys = ['ArrowLeft', 'ArrowUp', 'PageUp'];
       if (nextKeys.includes(event.key)) {
         event.preventDefault();
         goToSlide(activeIndex() + 1);
